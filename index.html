@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Главная - Эвакуатор и грузоперевозки</title>
+  <title>Выбор услуги - Эвакуатор и грузоперевозки</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,25 +12,82 @@
       <h1>Эвакуатор и грузоперевозки</h1>
       <nav>
         <ul>
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="services.html">Выбрать услугу</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
+          <li><a href="#services">Выбрать услугу</a></li>
+          <li><a href="#contacts">Контакты</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section class="hero">
+  <section id="services" class="services">
     <div class="container">
-      <h2>Добро пожаловать!</h2>
-      <p>Выберите нужную услугу и свяжитесь с исполнителем.</p>
+      <h2>Выберите услугу</h2>
+      <!-- Кнопки для переключения вкладок -->
+      <div class="tabs">
+        <button class="tab-button active" data-tab="evacuator">Эвакуатор</button>
+        <button class="tab-button" data-tab="septic">Откачка септиков</button>
+        <button class="tab-button" data-tab="cargo">Грузоперевозки</button>
+      </div>
+
+      <!-- Контент вкладок -->
+      <div class="tab-content">
+        <div id="evacuator" class="tab-pane active">
+          <div class="service-item">
+            <a href="https://imgur.com/эвакуатор1" target="_blank">
+              <img src="https://i.imgur.com/эвакуатор1.jpg" alt="Эвакуатор Иванов" class="service-image">
+            </a>
+            <p><strong>Иван Иванов</strong> - Эвакуатор в Москве</p>
+            <a href="https://wa.me/79001234567" class="whatsapp-button">Связаться по WhatsApp</a>
+          </div>
+          <div class="service-item">
+            <a href="https://imgur.com/эвакуатор2" target="_blank">
+              <img src="https://i.imgur.com/эвакуатор2.jpg" alt="Эвакуатор Петров" class="service-image">
+            </a>
+            <p><strong>Петр Петров</strong> - Эвакуатор в Санкт-Петербурге</p>
+            <a href="https://wa.me/79007654321" class="whatsapp-button">Связаться по WhatsApp</a>
+          </div>
+        </div>
+
+        <div id="septic" class="tab-pane">
+          <div class="service-item">
+            <a href="https://imgur.com/септик1" target="_blank">
+              <img src="https://i.imgur.com/септик1.jpg" alt="Откачка септиков Сергеев" class="service-image">
+            </a>
+            <p><strong>Сергей Сергеев</strong> - Откачка септиков в Московской области</p>
+            <a href="https://wa.me/79005554433" class="whatsapp-button">Связаться по WhatsApp</a>
+          </div>
+        </div>
+
+        <div id="cargo" class="tab-pane">
+          <div class="service-item">
+            <a href="https://imgur.com/грузоперевозки1" target="_blank">
+              <img src="https://i.imgur.com/грузоперевозки1.jpg" alt="Грузоперевозки Алексеев" class="service-image">
+            </a>
+            <p><strong>Алексей Алексеев</strong> - Грузоперевозки по России</p>
+            <a href="https://wa.me/79008887766" class="whatsapp-button">Связаться по WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacts" class="contacts">
+    <div class="container">
+      <h2>Контакты</h2>
+      <p>Если у вас есть вопросы, свяжитесь с нами:</p>
+      <ul>
+        <li>Телефон: +7 (900) 123-45-67</li>
+        <li>Email: info@evacuator.ru</li>
+      </ul>
     </div>
   </section>
 
   <footer>
     <div class="container">
-      <p>&copy; 2023 Эвакуатор и грузоперевозки</p>
+      <p>&copy; 2025 Достар</p>
     </div>
   </footer>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
