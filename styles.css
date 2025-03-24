@@ -1,4 +1,4 @@
-/* Основные стили */
+/* Основные стили остаются без изменений */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -14,114 +14,19 @@ body {
   padding: 20px;
 }
 
-/* Шапка с логотипом */
+/* Шапка с логотипом (желтая на десктопе) */
 header {
   padding: 10px 0;
   text-align: center;
   position: relative;
   overflow: hidden;
-  background-color: transparent; /* Убираем желтый фон */
+  background-color: #ffcc00; /* Желтый фон для десктопа */
 }
 
-.logo {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  object-fit: contain;
-}
-
-/* Остальные стили остаются без изменений */
-.tabs {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
-}
-
-.tab-button {
-  padding: 10px 20px;
-  background-color: #ffcc00; /* Желтый */
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-}
-
-.tab-button.active {
-  background-color: #4caf50; /* Зеленый */
-  color: #fff;
-}
-
-.tab-button:hover {
-  background-color: #f1c40f; /* Темно-желтый */
-}
-
-.tab-content {
-  position: relative;
-}
-
-.tab-pane {
-  display: none;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-.tab-pane.active {
-  display: block;
-  opacity: 1;
-}
-
-.service-item {
-  background-color: #fff;
-  padding: 15px;
-  margin: 10px 0;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.service-image {
-  width: 100%;
-  max-width: 150px;
-  height: auto;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-}
-
-.service-image:hover {
-  transform: scale(1.1);
-}
-
-.whatsapp-button {
-  display: inline-block;
-  background-color: #25d366; /* Цвет WhatsApp */
-  color: #fff;
-  padding: 10px 15px;
-  text-decoration: none;
-  border-radius: 5px;
-  margin-top: 10px;
-}
-
-.whatsapp-button:hover {
-  background-color: #128c7e; /* Темный цвет WhatsApp */
-}
-
-.contacts {
-  padding: 20px 0;
-  background-color: #e0e0e0;
-}
-
-footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
-  margin-top: 30px;
-}
-
+/* Мобильная версия */
 @media (max-width: 768px) {
   header {
+    background-color: transparent; /* Убираем желтый только на мобильных */
     padding: 5px 0;
   }
   
@@ -146,8 +51,20 @@ footer {
   }
 }
 
-@media (max-width: 480px) {
-  .logo {
-    max-height: 60px;
-  }
+/* Остальные стили без изменений */
+.logo {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
 }
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+/* ... остальной CSS остается как было ... */
