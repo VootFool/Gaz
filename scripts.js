@@ -1,34 +1,13 @@
 // Переключение вкладок
 document.querySelectorAll('.tab-button').forEach(button => {
-  button.addEventListener('click', function() {
-    // Удаляем активный класс у всех кнопок
-    document.querySelectorAll('.tab-button').forEach(btn => {
-      btn.classList.remove('active');
-    });
-    
-    // Добавляем активный класс текущей кнопке
-    this.classList.add('active');
-    
-    // Скрываем все вкладки
-    document.querySelectorAll('.tab-pane').forEach(pane => {
-      pane.classList.remove('active');
-    });
-    
-    // Показываем нужную вкладку
-    const tabId = this.getAttribute('data-tab');
-    document.getElementById(tabId).classList.add('active');
-  });
-});
+  button.addEventListener('click', function () {
+    // Убираем активный класс у всех кнопок и вкладок
+    document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
 
-// Плавная прокрутка для якорных ссылок
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({
-        behavior: 'smooth'
-      });
-    }
+    // Добавляем активный класс к выбранной кнопке и вкладке
+    const tabId = this.getAttribute('data-tab');
+    this.classList.add('active');
+    document.getElementById(tabId).classList.add('active');
   });
 });
